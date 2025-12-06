@@ -201,14 +201,6 @@ except Exception as e:
     st.error(f"Erro ao fazer a predição: {e}")
 
 # ======================================================
-# 📊 GRÁFICO APRIMORADO — PREÇO REAL + SINAIS + PROBABILIDADE
-# ======================================================
-
-import plotly.graph_objects as go
-
-st.subheader("📈 Modelo Ibovespa — Probabilidade")
-
-# ======================================================
 # PREPARAÇÃO DO DATAFRAME PARA O GRÁFICO
 # ======================================================
 
