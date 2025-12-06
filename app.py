@@ -200,36 +200,6 @@ try:
 except Exception as e:
     st.error(f"Erro ao fazer a predição: {e}")
 
-st.subheader("📈 Gráfico Aprimorado — Preço + Sinais do Modelo + Probabilidade")
-
-# gerar previsões e probabilidades
-df_plot = dados.copy()
-df_plot["Pred"] = modelo.predict(X)
-df_plot["Prob_Alta"] = modelo.predict_proba(X)[:, 1]
-
-# criar coluna de acerto
-df_plot["Acerto"] = (df_plot["Target"] == df_plot["Pred"]).astype(int)
-
-# ========================
-# BOTÕES DE PERÍODO
-# ========================
-
-periodo = st.selectbox(
-    "Selecione o período:",
-    ["Últimos 30 dias", "Últimos 60 dias", "Últimos 90 dias", "Últimos 180 dias", "Todo histórico"]
-)
-
-if periodo == "Últimos 30 dias":
-    df_plot = df_plot.tail(30)
-elif periodo == "Últimos 60 dias":
-    df_plot = df_plot.tail(60)
-elif periodo == "Últimos 90 dias":
-    df_plot = df_plot.tail(90)
-elif periodo == "Últimos 180 dias":
-    df_plot = df_plot.tail(180)
-# "Todo histórico" mantém tudo
-
-
 # ======================================================
 # 📊 GRÁFICO APRIMORADO — PREÇO REAL + SINAIS + PROBABILIDADE
 # ======================================================
