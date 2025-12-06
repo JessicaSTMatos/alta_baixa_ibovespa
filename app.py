@@ -206,7 +206,7 @@ except Exception as e:
 
 import plotly.graph_objects as go
 
-st.subheader("📈 Modelo Ibovespa — Preço, Sinais, Acertos e Probabilidade")
+st.subheader("📈 Modelo Ibovespa — Probabilidade")
 
 # ======================================================
 # PREPARAÇÃO DO DATAFRAME PARA O GRÁFICO
