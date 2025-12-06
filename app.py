@@ -200,6 +200,7 @@ try:
 except Exception as e:
     st.error(f"Erro ao fazer a predição: {e}")
 
+st.subheader("📈 Modelo Ibovespa - Previsões de Alta e Baixa")
 # ======================================================
 # PREPARAÇÃO DO DATAFRAME PARA O GRÁFICO
 # ======================================================
@@ -304,9 +305,7 @@ fig.update_layout(
     legend=dict(
         font=dict(size=12),
         bgcolor="rgba(0,0,0,0.3)"
-    ),
-
-    title="📈 Modelo Ibovespa — Previsões de Alta e Baixa"
+    )
 )
 
 st.plotly_chart(fig, use_container_width=True)
