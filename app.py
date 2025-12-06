@@ -20,7 +20,7 @@ st.markdown("Dashboard financeiro com modelo de classificação e análise tempo
 # ======================================================
 # CARREGAR MODELO TREINADO
 # ======================================================
-CAMINHO_MODELO = r"C:\Users\jessi\Downloads\alta_baixa_ibovespa\pipe_lr_model.joblib"
+CAMINHO_MODELO = "pipe_lr_model.joblib"
 
 if not os.path.exists(CAMINHO_MODELO):
     st.error("❌ Modelo não encontrado no caminho definido. Verifique o arquivo!")
@@ -31,7 +31,7 @@ modelo = joblib.load(CAMINHO_MODELO)
 # ======================================================
 # CARREGAR CSV
 # ======================================================
-caminho_csv = r"C:\Users\jessi\Downloads\alta_baixa_ibovespa\Dados Históricos - Ibovespa.csv"
+caminho_csv = "Dados Históricos - Ibovespa.csv"
 
 if not os.path.exists(caminho_csv):
     st.error("❌ Arquivo CSV não encontrado.")
